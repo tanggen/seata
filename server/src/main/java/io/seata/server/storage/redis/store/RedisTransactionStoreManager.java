@@ -453,7 +453,7 @@ public class RedisTransactionStoreManager extends AbstractTransactionStoreManage
             for (Object branchInfo : branchInfos) {
                 if (branchInfo != null) {
                     Map<String, String> branchInfoMap = (Map<String, String>) branchInfo;
-                    Optional<BranchTransactionDO> branchTransactionDO =
+                    Optional<BranchTransactionDO> branchTransactionDO = 
                             Optional.ofNullable((BranchTransactionDO) BeanUtils.mapToObject(branchInfoMap, BranchTransactionDO.class));
                     branchTransactionDO.ifPresent(branchTransactionDOs::add);
                 }
